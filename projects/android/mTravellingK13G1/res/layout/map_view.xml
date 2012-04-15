@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Wrapper -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<!-- Title -->
+	<ImageView android:id="@+id/tt_map" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:src="@drawable/tt_map_480x70" />
+
+	<!-- Google MapView Quang Tu -->
+	<com.google.android.maps.MapView android:id="@+id/map" android:layout_width="fill_parent" 
+		android:layout_height="405dp" android:layout_below="@id/tt_map" android:clickable="true" 
+		android:apiKey="0K1nQpN_MKE7phIw0Ef4RqYY2yS5mYjzqHfvJ4A" />
+		
+
+	<!-- MapAPI key of Le Hieu 
+	<com.google.android.maps.MapView
+		android:id="@+id/map" android:layout_width="fill_parent"
+		android:layout_height="405dp" android:layout_below="@id/tt_map"
+		android:clickable="true" android:apiKey="0iuwQQ9eDAyv8fvWGlNvCmjFolZZVgYHtWgx0Jw" />-->
+		
+	<Button android:id="@+id/btnDirection" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/btn_selector_direction"
+			android:layout_marginTop="455dp" android:layout_centerHorizontal="true"/>
+	<Button android:id="@+id/btnEng" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:background="@drawable/btn_selector_en"
+		android:layout_marginTop="455dp" android:layout_marginRight="5px"
+		android:layout_toLeftOf="@id/btnDirection" />
+	<Button android:id="@+id/btnVni" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:background="@drawable/btn_selector_vi"
+		android:layout_toRightOf="@id/btnDirection" android:layout_marginTop="455dp"
+		android:layout_marginLeft="5px"
+		/>
+	
+	
+</RelativeLayout>

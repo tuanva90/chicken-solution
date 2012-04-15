@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@drawable/bg_480x800">
+
+	<ImageView android:id="@+id/tt_categories"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:src="@drawable/tt_sendanemail_480x70" />
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:orientation="vertical"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:background="@drawable/bg_480x800">
+
+
+		<EditText android:id="@+id/etEmailAddress"
+			android:layout_width="250dp" android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:layout_alignParentRight="true"></EditText>
+		<TextView android:id="@+id/txtViewEmailAddress"
+			android:layout_toLeftOf="@id/etEmailAddress" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginTop="16dp"
+			android:text="To: " android:textColor="#ffffff" android:textStyle="bold"
+			android:textSize="15sp"></TextView>
+
+		<EditText android:id="@+id/etEmailSubject"
+			android:layout_width="250dp" android:layout_height="wrap_content"
+			android:layout_alignParentRight="true" android:layout_below="@id/etEmailAddress"></EditText>
+		<TextView android:id="@+id/txtViewEmailSubject"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_below="@id/txtViewEmailAddress"
+			android:layout_toLeftOf="@id/etEmailSubject"
+			android:layout_marginTop="30dp" android:text="Subject: "
+			android:textColor="#ffffff" android:textStyle="bold"
+			android:textSize="15sp"></TextView>
+
+		<TextView android:id="@+id/txtViewEmailContent"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_below="@id/etEmailSubject" android:layout_marginTop="10dp"
+			android:layout_centerHorizontal="true" android:text="Content: "
+			android:textColor="#ffffff" android:textStyle="bold"
+			android:textSize="15sp"></TextView>
+		<EditText android:id="@+id/etEmailText" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/txtViewEmailContent"
+			android:lines="10"></EditText>
+
+		<Button android:id="@+id/btnSendMail" android:layout_width="80dp"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true" android:text="Send"></Button>
+	</RelativeLayout>
+
+</LinearLayout>

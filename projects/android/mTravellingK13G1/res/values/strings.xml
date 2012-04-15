@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, testLayoutActivity!</string>
+    <string name="app_name">mTravelling</string>
+ 
+	<string name="btn_text_airport">Airports</string>
+	<string name="btn_text_atm">ATMs</string>
+	<string name="btn_text_bank">Banks</string>
+	<string name="btn_text_gas">Gas stations</string>
+	<string name="btn_text_hotel">Hotels</string>
+	<string name="btn_text_restaurant">Restaurants</string>
+	<string name="btn_text_taxi">Taxies</string>
+	<string name="btn_text_place">Places</string>
+	<string name="searchHint">Enter your keyword here ...</string>
+	<string name="ddlHint">Select one</string>
+</resources>

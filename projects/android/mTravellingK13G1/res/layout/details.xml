@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Wrapper -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@drawable/bg_480x800">
+
+	<!-- Title -->
+	<ImageView android:id="@+id/tt_categories"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:src="@drawable/tt_details_480x70" />
+
+	<!-- Result list -->
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+		<ImageView android:id="@+id/listResultContentWrapper"
+			android:layout_width="wrap_content" android:layout_height="500dp"
+			android:src="@drawable/content_wrap_480x640" />
+		<ImageView android:id="@+id/imgCategoryDetail"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/ic_empty_96x96"
+			android:layout_alignParentLeft="true" android:layout_marginTop="16dp"
+			android:layout_marginLeft="20dp" />
+		<TextView android:text="CATEGORY BANK111111111111111"
+			android:id="@+id/txtViewCategoryDetail" android:layout_width="225dp"
+			android:layout_height="62dp" android:maxLines="2" android:ellipsize="marquee"
+			android:paddingLeft="10dp" android:paddingRight="10dp"
+			android:gravity="center_vertical" android:layout_toRightOf="@+id/imgCategoryDetail"
+			android:layout_marginTop="16dp" android:textSize="16sp"
+			android:textStyle="bold" android:textColor="#e2d821"></TextView>
+		<ListView android:id="@+id/list" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginTop="5dp"
+			android:layout_marginBottom="50dp" android:divider="@android:color/transparent"
+			android:dividerHeight="5dp"	android:layout_below="@+id/imgCategoryDetail">
+		</ListView>
+
+		<!-- Button -->
+		<Button android:id="@+id/btnFavourite" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/btn_selector_favourite"
+			android:layout_alignParentRight="true" android:layout_marginTop="395dp"
+			android:layout_marginLeft="10dp" android:layout_marginRight="20dp"/>
+		<Button android:id="@+id/btnEmail" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/btn_selector_email"
+			android:layout_toLeftOf="@id/btnFavourite" android:layout_marginTop="395dp" />
+		<Button android:id="@+id/btnWeb" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/btn_selector_web"
+			android:layout_alignParentLeft="true" android:layout_marginRight="10dp"
+			android:layout_marginLeft="20dp" android:layout_marginTop="395dp" />
+		<Button android:id="@+id/btnShowMapDetail" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/btn_selector_showmap"
+			android:layout_toRightOf="@id/btnWeb" android:layout_marginTop="395dp" />
+	</RelativeLayout>
+
+
+</LinearLayout>

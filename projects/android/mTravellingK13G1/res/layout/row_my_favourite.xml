@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="?android:attr/listPreferredItemHeight"
+	android:layout_marginTop="65dp" android:padding="3dp"
+	android:background="@android:color/transparent">
+
+	<!-- <TextView android:id="@+id/txtViewCategory" android:layout_width="60dp" 
+		android:layout_height="fill_parent" android:text="Restaurant" android:textSize="11sp" 
+		android:textColor="#ffffff" android:textStyle="bold" android:background="@drawable/ic_empty_96x96" 
+		android:gravity="center_vertical|center_horizontal" android:layout_alignParentTop="true" 
+		android:layout_alignParentBottom="true" android:layout_marginRight="3dp" 
+		android:layout_marginLeft="12dp" /> -->
+
+	<TextView android:id="@+id/txtViewAddress"
+		android:layout_width="185dp" android:layout_height="28dp"
+		android:layout_alignParentBottom="true" android:layout_marginLeft="30dp"
+		android:ellipsize="marquee" android:maxLines="2"
+		android:text="Simple application that shows how to use RelativeLayout1111111111111111"
+		android:textSize="12sp" android:textColor="#03b2f3" />
+
+
+	<TextView android:id="@+id/txtViewName" android:layout_width="200dp"
+		android:layout_height="28dp" android:layout_alignParentTop="true"
+		android:layout_above="@id/txtViewAddress" android:layout_marginLeft="15dp"
+		android:layout_alignWithParentIfMissing="true" android:singleLine="true"
+		android:gravity="center_vertical"
+		android:text="Ngan Hang Sacombank11111111111111111111111111111111111"
+		android:textColor="#ffffff" android:textSize="12sp" android:textStyle="bold" />
+
+	<CheckBox android:id="@+android:id/checkboxItem"
+		android:layout_marginRight="25dp" android:layout_width="20dp"
+		android:layout_height="fill_parent" android:focusable="false"
+		android:layout_alignParentRight="true" android:gravity="center_vertical"
+		android:button="@drawable/checkbox_selector" />
+
+</RelativeLayout>
+
+
+
+
+
+
+	
+
+
+		

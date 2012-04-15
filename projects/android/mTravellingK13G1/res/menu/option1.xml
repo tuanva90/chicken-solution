@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item 
+  	android:id="@+id/change_location_menu"
+  	android:icon="@drawable/btn_selector_mn_location"
+  />
+  
+   <item 
+  	android:id="@+id/my_favorite_menu"
+  	android:icon="@drawable/btn_selector_mn_favorites"
+  />
+  
+  <item 
+  	android:id="@+id/quit_menu"
+  	android:icon="@drawable/btn_selector_mn_quit"
+  />
+  
+</menu>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Wrapper -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@drawable/bg_480x800">
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+		<!-- Title -->
+		<ImageView android:id="@+id/tt_categories"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:src="@drawable/tt_getdirection_480x70" />
+	</RelativeLayout>
+
+	<!-- Result list -->
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+		<ImageView android:id="@+id/listResultContentWrapper"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginTop="5dp" android:src="@drawable/content_wrap_480x640" />
+
+		<TextView android:id="@+id/txtIntro" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp" android:layout_marginTop="20dp"
+			android:text="Select places from the drop-down lists below then click the button Show Map. You'll know the driving direction from start-point to end-point."
+			android:textColor="#ffffff" android:textSize="16sp"
+			android:textStyle="normal" />
+			
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginTop="155dp" android:text="FROM" android:layout_centerHorizontal="true"
+			android:textStyle="bold"/>
+
+		<Spinner android:id="@+id/ddlFrom" android:layout_width="250dp"
+			android:layout_centerHorizontal="true" android:layout_marginTop="170dp"
+			android:layout_height="wrap_content" android:prompt="@string/ddlHint" />
+			
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginTop="250dp" android:text="TO" android:layout_centerHorizontal="true"
+			android:textStyle="bold"/>
+			
+		<Spinner android:id="@+id/ddlPlaces" android:layout_width="250dp"
+			android:layout_centerHorizontal="true" android:layout_marginTop="265dp"
+			android:layout_height="wrap_content" android:prompt="@string/ddlHint" />
+
+
+		<Button android:id="@+id/btnGetRoute" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/btn_selector_showmap"
+			android:layout_centerHorizontal="true" android:layout_marginTop="400dp" />
+	</RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="?android:attr/listPreferredItemHeight"
+	android:layout_marginTop="65dp" android:padding="3dp">
+
+	<!-- Row -->
+	<TextView android:id="@+id/txtViewAddress"
+		android:layout_width="250dp" android:layout_height="fill_parent"
+		android:layout_marginLeft="20dp" android:ellipsize="marquee"
+		android:maxLines="2" android:gravity="center_vertical"
+		android:text="Vietnam, Ho Chi Minh city blah blah blah blah blah "
+		android:textSize="15sp" android:textColor="#ffffff" android:textStyle="bold" />
+
+	<!-- Arrow -->
+	<ImageView android:id="@+id/icArrow" android:layout_width="wrap_content"
+		android:layout_height="fill_parent" android:layout_marginRight="16dp"
+		android:layout_alignParentTop="true" android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true" android:src="@drawable/next_18x18" />
+
+</RelativeLayout>
+
+
