@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@drawable/bg_480x800">
+
+	<ImageView android:id="@+id/tt_categories"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:src="@drawable/tt_myfavourites_480x70" />
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_marginTop="5dp">
+		<ImageView android:id="@+id/boxsearch" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:src="@drawable/searchbox_changelocation_v2_480x56" />
+		<EditText android:id="@+id/txtSearch" android:layout_width="211dp"
+			android:layout_height="19dp" android:layout_marginTop="10dp"
+			android:layout_marginLeft="15dp" android:background="@android:color/transparent"
+			android:hint="Enter keyword" android:textColorHint="#ffffff"
+			android:textColor="#ffffff" android:textSize="12sp" />
+		<Button android:id="@+id/btnSearch" android:layout_width="80dp"
+			android:layout_height="33dp" android:layout_marginTop="2dp"
+			android:background="@drawable/btn_selector_search"
+			android:layout_toRightOf="@id/txtSearch" />
+		<!-- <Button android:id="@+id/btnAdvance" android:layout_width="40dp" android:layout_height="19dp" 
+			android:layout_marginTop="9dp" android:background="@android:color/transparent" 
+			android:layout_toRightOf="@id/btnSearch" /> -->
+	</RelativeLayout>
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+		<ImageView android:id="@+id/listResultContentWrapper"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/content_wrap_480x600" />
+		<!-- <TextView android:text="Category" android:id="@+id/txtViewCategory" 
+			android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			android:layout_gravity="center" android:layout_alignParentLeft="true" android:layout_marginLeft="20dp" 
+			android:layout_marginTop="12dp" android:textSize="12sp" android:textStyle="bold" 
+			android:textColor="#e2d821"></TextView> -->
+		<TextView android:text="Description" android:id="@+id/txtViewShortDescription"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="60dp" android:layout_marginTop="12dp"
+			android:textSize="15sp" android:textStyle="bold" android:textColor="#e2d821"></TextView>
+		<TextView android:text="Check all" android:id="@+id/txtViewCheckAll"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_gravity="center" android:layout_alignParentRight="true"
+			android:layout_marginRight="20dp" android:layout_marginTop="12dp"
+			android:textSize="15sp" android:textStyle="bold" android:textColor="#e2d821"></TextView>
+		<CheckBox android:id="@+android:id/checkboxCheckAll"
+			android:layout_marginTop="8dp" android:layout_marginRight="2dp"
+			android:layout_width="20dp" android:layout_height="20dp"
+			android:focusable="false" android:layout_toLeftOf="@id/txtViewCheckAll"
+			android:button="@drawable/checkbox_selector" />
+		<ListView android:id="@id/android:list" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginTop="0dp"
+			android:layout_marginBottom="40dp" android:divider="@android:color/transparent"
+			android:layout_below="@id/txtViewShortDescription">
+		</ListView>
+
+		<Button android:id="@+id/btnDelete" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/btn_selector_delete"
+			android:layout_centerHorizontal="true" android:layout_marginTop="358dp" />
+
+		<Button android:id="@+id/btnPrev" android:layout_width="wrap_content"
+			android:layout_toLeftOf="@id/btnDelete" android:layout_height="wrap_content"
+			android:background="@drawable/btn_selector_prev"
+			android:layout_centerHorizontal="true" android:layout_marginTop="358dp"
+			android:layout_marginRight="55dp" />
+
+		<Button android:id="@+id/btnNext" android:layout_width="wrap_content"
+			android:layout_toRightOf="@id/btnDelete" android:layout_height="wrap_content"
+			android:background="@drawable/btn_selector_next"
+			android:layout_centerHorizontal="true" android:layout_marginTop="358dp"
+			android:layout_marginLeft="55dp" />
+
+		<TextView android:text="10/10" android:id="@+id/txtViewPage"
+			android:layout_toLeftOf="@id/btnNext" android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginRight="-54dp" android:layout_marginTop="362dp"
+			android:textSize="11sp" android:textStyle="bold" android:textColor="#ffffff"></TextView>
+	</RelativeLayout>
+
+
+</LinearLayout>

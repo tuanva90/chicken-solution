@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Wrapper -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@drawable/bg_480x800" android:orientation="vertical">
+
+	<!-- Title -->
+	<ImageView android:id="@+id/tt_categories"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:src="@drawable/tt_changelocation_480x70" />
+
+	<!-- Search box -->
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_marginTop="5dp">
+		<ImageView android:id="@+id/boxsearch" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:src="@drawable/searchbox_changelocation_v2_480x56" />
+		<AutoCompleteTextView android:id="@+id/txtSearch"
+			android:layout_width="211dp" android:layout_height="19dp"
+			android:layout_marginTop="9dp" android:layout_marginLeft="15dp"
+			android:background="@android:color/transparent" android:hint="@string/searchHint"
+			android:textSize="12sp"
+			android:textColor="#ffffff" 
+		/>
+		<Button android:id="@+id/btnSearch" android:layout_width="80dp"
+			android:layout_height="33dp" android:layout_marginTop="2dp"	
+			android:background="@drawable/btn_selector_search"
+			android:layout_toRightOf="@id/txtSearch" />
+	</RelativeLayout>
+
+
+	<!-- Result list--> 
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+		<ImageView android:id="@+id/listResultContentWrapper"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/content_wrap_480x600" />
+		<TextView android:text="Result" android:id="@+id/txtViewResult"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:gravity="center_horizontal" android:layout_marginTop="12dp"
+			android:textSize="18sp" android:textStyle="bold" android:textColor="#e2d821"></TextView>
+
+		<ListView android:id="@+id/listResult" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginTop="5dp"
+			android:layout_below="@id/txtViewResult" android:layout_marginBottom="10dp"
+			android:divider="@android:color/transparent" android:paddingBottom="5dp"
+			android:dividerHeight="5dp">
+			
+		</ListView>
+		
+		<Button android:id="@+id/btnBackToCurrent" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:background="@drawable/btn_selector_currentlocation"
+			android:layout_centerHorizontal="true" android:layout_marginTop="358dp" />
+	</RelativeLayout>
+	
+</LinearLayout>
