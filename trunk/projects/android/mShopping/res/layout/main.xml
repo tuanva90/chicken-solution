@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Wrapper -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent" android:layout_height="fill_parent"
-	android:orientation="vertical" android:background="@drawable/splash_screen">
-</LinearLayout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#333333"
+    >
+<!--  Header  Starts-->
+	<LinearLayout android:id="@+id/header"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="@layout/header_gradient" 
+			android:paddingTop="5dip"
+			android:paddingBottom="5dip">
+			<!-- Logo Start-->
+			<TextView
+			    android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:text="Wellcome"
+		  		android:gravity="center"
+		  		android:textSize="18dip"
+		  		android:textStyle="bold"
+		  		android:textColor="#ffffff"
+			    />
+			<!-- Logo Ends -->
+	</LinearLayout>
+	<!--  Header Ends -->
+    
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/mylogo" >
+    </ImageView>
+
+</RelativeLayout>

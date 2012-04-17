@@ -12,11 +12,22 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
-        public static final int splash_screen=0x7f020001;
+        public static final int mylogo=0x7f020001;
+        public static final int shape_special_item_hight_light=0x7f020002;
+    }
+    public static final class id {
+        public static final int ImageView01=0x7f050005;
+        public static final int gridView1=0x7f050001;
+        public static final int grid_item_image=0x7f050003;
+        public static final int grid_item_label=0x7f050004;
+        public static final int header=0x7f050000;
+        public static final int relativelayout1=0x7f050002;
     }
     public static final class layout {
         public static final int categories=0x7f030000;
-        public static final int main=0x7f030001;
+        public static final int gridview_row=0x7f030001;
+        public static final int header_gradient=0x7f030002;
+        public static final int main=0x7f030003;
     }
     public static final class string {
         public static final int app_name=0x7f040001;
