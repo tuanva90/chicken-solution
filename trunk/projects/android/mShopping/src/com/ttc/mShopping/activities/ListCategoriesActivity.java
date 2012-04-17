@@ -62,12 +62,12 @@ public class ListCategoriesActivity extends Activity{
 	    	listLabel.add(CommonConfiguration.atms);
 	    	
 	    	listImage = new ArrayList<Integer>();
-	    	listImage.add(android.R.drawable.ic_dialog_map);
-	    	listImage.add(android.R.drawable.ic_dialog_map);
-	    	listImage.add(android.R.drawable.ic_dialog_map);
-	    	listImage.add(android.R.drawable.ic_dialog_map);
-	    	listImage.add(android.R.drawable.ic_dialog_map);
-	    	listImage.add(android.R.drawable.ic_dialog_map);
+	    	listImage.add(R.drawable.icongasstation);
+	    	listImage.add(R.drawable.icontaxi);
+	    	listImage.add(R.drawable.iconhotel);
+	    	listImage.add(R.drawable.iconbank);
+	    	listImage.add(R.drawable.iconrestaurant);
+	    	listImage.add(R.drawable.iconatm);
 	    	
 	    }
 	}
