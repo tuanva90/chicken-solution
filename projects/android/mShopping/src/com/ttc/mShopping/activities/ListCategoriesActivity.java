@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -55,6 +54,8 @@ public class ListCategoriesActivity extends Activity {
 		listLabel.add(CommonConfiguration.banks);
 		listLabel.add(CommonConfiguration.restaurants);
 		listLabel.add(CommonConfiguration.atms);
+		listLabel.add(CommonConfiguration.favorites);
+		listLabel.add(CommonConfiguration.settings);
 
 		listImage = new ArrayList<Integer>();
 		listImage.add(R.drawable.icongasstation);
@@ -63,6 +64,8 @@ public class ListCategoriesActivity extends Activity {
 		listImage.add(R.drawable.iconbank);
 		listImage.add(R.drawable.iconrestaurant);
 		listImage.add(R.drawable.iconatm);
+		listImage.add(R.drawable.iconfavorite);
+		listImage.add(R.drawable.iconsetting);
 
 	}
 }

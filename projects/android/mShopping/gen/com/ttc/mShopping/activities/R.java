@@ -14,12 +14,14 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
         public static final int iconatm=0x7f020001;
         public static final int iconbank=0x7f020002;
-        public static final int icongasstation=0x7f020003;
-        public static final int iconhotel=0x7f020004;
-        public static final int iconrestaurant=0x7f020005;
-        public static final int icontaxi=0x7f020006;
-        public static final int mylogo=0x7f020007;
-        public static final int shape_special_item_hight_light=0x7f020008;
+        public static final int iconfavorite=0x7f020003;
+        public static final int icongasstation=0x7f020004;
+        public static final int iconhotel=0x7f020005;
+        public static final int iconrestaurant=0x7f020006;
+        public static final int iconsetting=0x7f020007;
+        public static final int icontaxi=0x7f020008;
+        public static final int mylogo=0x7f020009;
+        public static final int shape_special_item_hight_light=0x7f02000a;
     }
     public static final class id {
         public static final int ImageView01=0x7f050005;
