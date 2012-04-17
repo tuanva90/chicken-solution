@@ -48,22 +48,20 @@ public class ListCategoriesActivity extends Activity {
 
 	public void prepareList() {
 		listLabel = new ArrayList<String>();
-		listLabel.add(CommonConfiguration.gas_stations);
-		listLabel.add(CommonConfiguration.taxis);
-		listLabel.add(CommonConfiguration.hotels);
-		listLabel.add(CommonConfiguration.banks);
-		listLabel.add(CommonConfiguration.restaurants);
-		listLabel.add(CommonConfiguration.atms);
+		listLabel.add(CommonConfiguration.babystore);
+		listLabel.add(CommonConfiguration.bookstore);
+		listLabel.add(CommonConfiguration.clothingstore);
+		listLabel.add(CommonConfiguration.mallshopping);
+		//listLabel.add(CommonConfiguration.atms);
 		listLabel.add(CommonConfiguration.favorites);
 		listLabel.add(CommonConfiguration.settings);
 
 		listImage = new ArrayList<Integer>();
-		listImage.add(R.drawable.icongasstation);
-		listImage.add(R.drawable.icontaxi);
-		listImage.add(R.drawable.iconhotel);
-		listImage.add(R.drawable.iconbank);
-		listImage.add(R.drawable.iconrestaurant);
-		listImage.add(R.drawable.iconatm);
+		listImage.add(R.drawable.iconbaby);
+		listImage.add(R.drawable.iconbook);
+		listImage.add(R.drawable.iconclothing);
+		listImage.add(R.drawable.iconmallshopping);
+		//listImage.add(R.drawable.iconatm);
 		listImage.add(R.drawable.iconfavorite);
 		listImage.add(R.drawable.iconsetting);
 
