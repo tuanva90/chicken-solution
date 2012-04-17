@@ -7,5 +7,7 @@ public class CommonConfiguration {
 	public static final String hotels = "Hotels";
 	public static final String restaurants = "Restaurants";
 	public static final String banks = "Banks";
+	public static final String favorites = "Favorites";
+	public static final String settings = "Settings";
 	
 }
