@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Wrapper -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- Title -->
+
+    <ImageView
+        android:id="@+id/tt_map"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tt_map_480x70" />
+
+  
+    <com.google.android.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="405dp"
+        android:layout_below="@id/tt_map"
+        android:apiKey="0b9YYwJOIuqOnj-MHNSSzpLh-JtmrR8fCeoyD8Q"
+        android:clickable="true" />
+
+   
+    <Button
+        android:id="@+id/btnDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="455dp"
+        android:background="@drawable/btn_selector_direction" />
+
+   </RelativeLayout>
