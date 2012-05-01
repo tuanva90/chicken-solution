@@ -47,7 +47,7 @@
             android:maxLines="2"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:text="CATEGORY BANK111111111111111"
+            android:text=""
             android:textColor="#e2d821"
             android:textSize="16sp"
             android:textStyle="bold" >
