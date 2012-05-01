@@ -36,7 +36,7 @@ public class ListCategoriesActivity extends Activity {
 				// TODO Auto-generated method stub
 				Bundle bundle = new Bundle();
 				bundle.putString(CommonConfiguration.QUERY,CommonConfiguration.BOOK_STORE);
-				bundle.putInt(CommonConfiguration.IQUERY, CommonConfiguration.Iatm);
+				bundle.putInt(CommonConfiguration.IQUERY, CommonConfiguration.Ibookstore);
 				Intent intent = new Intent(ListCategoriesActivity.this, SearchResultActivity.class);
 				intent.putExtras(bundle);
 				startActivity(intent);
