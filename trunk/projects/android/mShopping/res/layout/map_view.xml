@@ -29,5 +29,22 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="455dp"
         android:background="@drawable/btn_selector_direction" />
+     <Button
+        android:id="@+id/btnEng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5px"
+        android:layout_marginTop="455dp"
+        android:layout_toLeftOf="@id/btnDirection"
+        android:background="@drawable/btn_selector_en" />
+
+    <Button
+        android:id="@+id/btnVni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5px"
+        android:layout_marginTop="455dp"
+        android:layout_toRightOf="@id/btnDirection"
+        android:background="@drawable/btn_selector_vi" />
 
    </RelativeLayout>
