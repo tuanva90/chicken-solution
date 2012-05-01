@@ -140,23 +140,22 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 
 	/** Display view on screen */
 	private void displayContent(int iquery) {
-	//	tvCategory = (TextView) findViewById(R.id.txtViewCategory);
-		//tvCategory.setText(item.getTitleNoFormatting().toUpperCase());
+		tvCategory = (TextView) findViewById(R.id.txtViewCategoryDetail);
+		tvCategory.setText(item.getTitleNoFormatting().toUpperCase());
 
-		//imgCategory = (ImageView) findViewById(R.i//);
+		imgCategory = (ImageView) findViewById(R.id.imgCategoryDetail);
+		btnViewWeb = (Button) findViewById(R.id.btnWeb);
+		btnViewWeb.setOnClickListener(this);
 
-		//btnViewWeb = (Button) findViewById);
-		//btnViewWeb.setOnClickListener(this);
+		btnViewMap = (Button) findViewById(R.id.btnShowMapDetail);
+		btnViewMap.setOnClickListener(this);
+		
+		btnEmail = (Button) findViewById(R.id.btnEmail);
+		btnEmail.setOnClickListener(this);
 
-		//btnViewMap = (Button) findViewById(R.id.btnShowMap);
-		//btnViewMap.setOnClickListener(this);
-
-		//btnEmail = (Button) findViewById(R.id.btnEmail);
-		//btnEmail.setOnClickListener(this);
-
-		// button add favourite
-		//btnFavourite = (Button) findViewById(R.id.btnFavourite);
-		//btnFavourite.setOnClickListener(this);
+		 //button add favourite
+		btnFavourite = (Button) findViewById(R.id.btnFavourite);
+		btnFavourite.setOnClickListener(this);
 
 		switch (iquery) {
 		case CommonConfiguration.Ibookstore:
@@ -358,12 +357,12 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 	@Override
 	public void onClick(View v) {
 		if (v == btnViewWeb) { // Click on button ViewWeb
-			Bundle bundle = new Bundle();
+			/*Bundle bundle = new Bundle();
 			bundle.putString(CommonConfiguration.URL_TO_WEB, item.getUrl());
 			Intent intent = new Intent(DetailInfoActivity.this,
 					ViewWebActivity.class);
 			intent.putExtras(bundle);
-			startActivity(intent);
+			startActivity(intent);*/
 		} else if (v == btnViewMap) { // Click on button ViewMap
 			Bundle bundle = new Bundle();
 
@@ -375,14 +374,14 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 			intent.putExtras(bundle);
 			startActivity(intent);
 		} else if (v == btnEmail) { // Click on button Email
-			Bundle bundle = new Bundle();
+			/*Bundle bundle = new Bundle();
 			bundle.putSerializable(CommonConfiguration.SEARCH_RESULT, item);
 			Intent intent = new Intent(DetailInfoActivity.this,
 					SendMailActivity.class);
 			intent.putExtras(bundle);
-			startActivity(intent);
+			startActivity(intent);*/
 		} else if (v == btnFavourite) { // Click on button Favourite
-			if (item != null) {
+			/*if (item != null) {
 				try {
 					String strName = item.getTitleNoFormatting();
 					String strAddress = "";
@@ -487,7 +486,7 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 							" DetailActivity - mClickbtnFavourite - exception"
 									+ e.toString());
 				}
-			}
+			}*/
 		}
 	}
 	
