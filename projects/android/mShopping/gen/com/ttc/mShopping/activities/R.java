@@ -57,55 +57,64 @@ public final class R {
         public static final int shape_special_item_hight_light=0x7f02002b;
         public static final int star=0x7f02002c;
         public static final int tt_details_480x70=0x7f02002d;
-        public static final int tt_map_480x70=0x7f02002e;
-        public static final int tt_searchresults_480x70=0x7f02002f;
+        public static final int tt_direction_480x70=0x7f02002e;
+        public static final int tt_getdirection_480x70=0x7f02002f;
+        public static final int tt_map_480x70=0x7f020030;
+        public static final int tt_searchresults_480x70=0x7f020031;
     }
     public static final class id {
-        public static final int ImageView01=0x7f05000f;
-        public static final int btnDirection=0x7f050012;
+        public static final int ImageView01=0x7f050013;
+        public static final int btnDirection=0x7f050016;
         public static final int btnEmail=0x7f050009;
         public static final int btnFavourite=0x7f050008;
-        public static final int btnShowMap=0x7f05001e;
+        public static final int btnGetRoute=0x7f05000f;
+        public static final int btnShowMap=0x7f050022;
         public static final int btnShowMapDetail=0x7f05000b;
         public static final int btnWeb=0x7f05000a;
         public static final int btntestbabystore=0x7f050001;
+        public static final int ddlFrom=0x7f05000d;
+        public static final int ddlPlaces=0x7f05000e;
         public static final int gridView1=0x7f050002;
-        public static final int grid_item_image=0x7f05000d;
-        public static final int grid_item_label=0x7f05000e;
+        public static final int grid_item_image=0x7f050011;
+        public static final int grid_item_label=0x7f050012;
         public static final int header=0x7f050000;
-        public static final int icArrow=0x7f050019;
+        public static final int icArrow=0x7f05001d;
         public static final int imgCategoryDetail=0x7f050005;
-        public static final int imgIcon=0x7f050014;
-        public static final int imgRowContent=0x7f050013;
+        public static final int imgIcon=0x7f050018;
+        public static final int imgRowContent=0x7f050017;
         public static final int list=0x7f050007;
-        public static final int listResult=0x7f05001d;
+        public static final int listResult=0x7f050021;
         public static final int listResultContentWrapper=0x7f050004;
-        public static final int map=0x7f050011;
-        public static final int relativelayout1=0x7f05000c;
+        public static final int map=0x7f050015;
+        public static final int relativelayout1=0x7f050010;
         public static final int tt_categories=0x7f050003;
-        public static final int tt_map=0x7f050010;
-        public static final int txtInfo=0x7f050016;
-        public static final int txtTitle=0x7f050015;
-        public static final int txtViewAddress=0x7f050017;
-        public static final int txtViewCategory=0x7f05001b;
+        public static final int tt_map=0x7f050014;
+        public static final int txtInfo=0x7f05001a;
+        public static final int txtIntro=0x7f05000c;
+        public static final int txtTitle=0x7f050019;
+        public static final int txtViewAddress=0x7f05001b;
+        public static final int txtViewCategory=0x7f05001f;
         public static final int txtViewCategoryDetail=0x7f050006;
-        public static final int txtViewDistance=0x7f05001a;
-        public static final int txtViewName=0x7f050018;
-        public static final int txtViewShortDescription=0x7f05001c;
+        public static final int txtViewDistance=0x7f05001e;
+        public static final int txtViewName=0x7f05001c;
+        public static final int txtViewShortDescription=0x7f050020;
     }
     public static final class layout {
         public static final int categories=0x7f030000;
         public static final int details=0x7f030001;
-        public static final int gridview_row=0x7f030002;
-        public static final int header_gradient=0x7f030003;
-        public static final int main=0x7f030004;
-        public static final int map_view=0x7f030005;
-        public static final int row_details=0x7f030006;
-        public static final int row_search_result=0x7f030007;
-        public static final int search_result=0x7f030008;
+        public static final int get_direction=0x7f030002;
+        public static final int gridview_row=0x7f030003;
+        public static final int header_gradient=0x7f030004;
+        public static final int main=0x7f030005;
+        public static final int map_view=0x7f030006;
+        public static final int row_details=0x7f030007;
+        public static final int row_search_result=0x7f030008;
+        public static final int search_result=0x7f030009;
     }
     public static final class string {
         public static final int app_name=0x7f040001;
+        public static final int ddlHint=0x7f040003;
         public static final int hello=0x7f040000;
+        public static final int searchHint=0x7f040002;
     }
 }
