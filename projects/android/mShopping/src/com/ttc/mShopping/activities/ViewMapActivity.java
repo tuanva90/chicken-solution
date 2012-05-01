@@ -1,6 +1,5 @@
 package com.ttc.mShopping.activities;
 
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +16,7 @@ import android.os.Bundle;
 import android.os.Handler;
 /*import android.util.FloatMath;*/
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -26,7 +26,6 @@ import android.view.View;
 import android.view.LayoutInflater.Factory;
 import android.view.View.OnClickListener;
 import android.widget.*;
-
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.MapActivity;
@@ -134,6 +133,7 @@ public class ViewMapActivity extends MapActivity {
 			alertDialog.setMessage(e.toString());
 			alertDialog.setPositiveButton("Ok", null);
 			alertDialog.show();
+			Log.v("viemap", e.getMessage());
 		}
 	}
 
@@ -142,14 +142,7 @@ public class ViewMapActivity extends MapActivity {
 			btnDirection.setVisibility(4);
 		else
 			btnDirection.setVisibility(0);
-
-		if (respectLocation == null) {
-			btnEn.setVisibility(4);
-			btnVi.setVisibility(4);
-		} else {
-			btnEn.setVisibility(0);
-			btnVi.setVisibility(0);
-
+		if (respectLocation != null) {
 			// Draw position to map
 			double detailLAT = respectLocation.getLat();
 			double detailLNG = respectLocation.getLng();
@@ -172,50 +165,6 @@ public class ViewMapActivity extends MapActivity {
 			if (!statusDirection.equals("OK"))
 				Toast.makeText(getApplicationContext(), statusDirection,
 						Toast.LENGTH_SHORT).show();
-
-			btnVi.setOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					if (directionVI == null) {
-						ms.getRoute(respectLocation, fromLat, fromLng, "vi");
-						listRoutePoint = ms.getListPathPoint();
-						directionVI = ms.getDirection();
-					}
-					if (directionVI != null) {
-						AlertDialog.Builder alertDialog = new AlertDialog.Builder(
-								ViewMapActivity.this);
-						alertDialog.setTitle("Route Direction");
-						alertDialog.setMessage(directionVI);
-						alertDialog.setPositiveButton("Ok", null);
-						alertDialog.show();
-					} else
-						Toast.makeText(getApplicationContext(),
-								"There're no direction", Toast.LENGTH_SHORT)
-								.show();
-				}
-			});
-
-			btnEn.setOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					if (directionEN == null) {
-						ms.getRoute(respectLocation, fromLat, fromLng, "en");
-						listRoutePoint = ms.getListPathPoint();
-						directionEN = ms.getDirection();
-					}
-					if (directionEN != null) {
-						AlertDialog.Builder alertDialog = new AlertDialog.Builder(
-								ViewMapActivity.this);
-						alertDialog.setTitle("Route Direction");
-						alertDialog.setMessage(directionEN);
-						alertDialog.setPositiveButton("Ok", null);
-						alertDialog.show();
-					} else
-						Toast.makeText(getApplicationContext(),
-								"There're no direction", Toast.LENGTH_SHORT)
-								.show();
-				}
-			});
 		}
 		btnDirection.setOnClickListener(new OnClickListener() {
 			@Override
