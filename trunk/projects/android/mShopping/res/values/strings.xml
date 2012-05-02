@@ -3,6 +3,9 @@
 
     <string name="hello">Hello World, MShoppingActivity!</string>
     <string name="app_name">mShopping</string>
-	<string name="searchHint">Enter your keyword here ...</string>
+	<string name="searchHint">Enter your keyword here</string>
 	<string name="ddlHint">Select one</string>
+	<string name="home_menu">Home</string>
+	<string name="back_menu">Back</string>
+	<string name="favourite_menu">Favourite</string>
 </resources>

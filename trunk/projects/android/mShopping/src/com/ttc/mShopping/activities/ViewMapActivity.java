@@ -542,5 +542,33 @@ public class ViewMapActivity extends MapActivity {
 		});
 
 	}
+	
+	//Create menu
+			@Override
+			public boolean onCreateOptionsMenu(Menu menu) {
+				// TODO Auto-generated method stub
+				MenuInflater inf=this.getMenuInflater();
+				inf.inflate(R.menu.mainmenu ,menu);		
+				return true;
+			}
+			@Override
+			public boolean onOptionsItemSelected(MenuItem item) {
+				// TODO Auto-generated method stub
+				if(item.getItemId()==R.id.mnOptionHome)
+				{
+					Intent intent = new Intent(ViewMapActivity.this, ListCategoriesActivity.class);
+					startActivity(intent);			
+				}
+				if(item.getItemId()==R.id.mnOptionFavourite)
+				{
+					Intent intent = new Intent(ViewMapActivity.this, MyFavouriteActivity.class);
+					startActivity(intent);			
+				}
+				if(item.getItemId()==R.id.mnOptionBack)
+				{
+					onBackPressed();
+				}
+				return super.onOptionsItemSelected(item);
+			}
 
 }

@@ -18,8 +18,9 @@ public class DBHelper extends SQLiteOpenHelper {
 	/**
 	 * DB info
 	 */
-	private static String DATABASE_PATH = "/data/data/com.tma.ttc.androidK13.activities/databases/";
-	private static final String DATABASE_NAME = "mFavouriteDB";
+	//private static String DATABASE_PATH = "/data/data/com.ttc.mShopping.activities/databases/";
+	private static String DATABASE_PATH = "file:///android_asset/";
+	private static final String DATABASE_NAME = "mFavouriteDB.db";
 	private static final int DATABASE_VERSION = 2;
 	private static final String DATABASE_CREATE = "create table Favourite (_id integer primary key autoincrement, "
 			+ "name text , address text , phone text , lat text , lng text , rating text, distance text , url text , idc text );";

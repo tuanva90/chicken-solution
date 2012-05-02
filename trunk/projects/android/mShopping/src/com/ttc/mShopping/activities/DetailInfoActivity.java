@@ -47,7 +47,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class DetailInfoActivity extends Activity implements OnClickListener,
+public class DetailInfoActivity extends TemplateActivity implements OnClickListener,
 		Runnable {
 	// Components on layout
 	private ImageView imgCategory;
@@ -164,21 +164,19 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 		/*case CommonConfiguration.Iatm:
 			imgCategory.setImageResource(R.drawable.iconatm);
 			break;
+			*/
 		case CommonConfiguration.Ibabystore:
 			imgCategory.setImageResource(R.drawable.iconbaby);
 			break;
 		case CommonConfiguration.Ibank:
 			imgCategory.setImageResource(R.drawable.iconbank);
 			break;
-		case CommonConfiguration.Ibookstore:
-			imgCategory.setImageResource(R.drawable.iconbook);
-			break;
 		case CommonConfiguration.Icothingstore:
 			imgCategory.setImageResource(R.drawable.iconclothing);
 			break;
 		case CommonConfiguration.Imallshopping:
 			imgCategory.setImageResource(R.drawable.iconmallshopping);
-			break;*/
+			break;
 		}
 	}
 
@@ -357,12 +355,12 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 	@Override
 	public void onClick(View v) {
 		if (v == btnViewWeb) { // Click on button ViewWeb
-			/*Bundle bundle = new Bundle();
+			Bundle bundle = new Bundle();
 			bundle.putString(CommonConfiguration.URL_TO_WEB, item.getUrl());
 			Intent intent = new Intent(DetailInfoActivity.this,
 					ViewWebActivity.class);
 			intent.putExtras(bundle);
-			startActivity(intent);*/
+			startActivity(intent);
 		} else if (v == btnViewMap) { // Click on button ViewMap
 			Bundle bundle = new Bundle();
 
@@ -381,7 +379,7 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 			intent.putExtras(bundle);
 			startActivity(intent);*/
 		} else if (v == btnFavourite) { // Click on button Favourite
-			/*if (item != null) {
+			if (item != null) {
 				try {
 					String strName = item.getTitleNoFormatting();
 					String strAddress = "";
@@ -486,7 +484,7 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 							" DetailActivity - mClickbtnFavourite - exception"
 									+ e.toString());
 				}
-			}*/
+			}
 		}
 	}
 	
@@ -514,36 +512,7 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 			}
 		});
 	}
-
-	/*@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		if (item.getItemId() == R.id.change_location_menu) {
-			Intent intent = new Intent(DetailInfoActivity.this,
-					ChangeLocationActivity.class);
-			startActivity(intent);
-		} else if (item.getItemId() == R.id.my_favorite_menu) {
-			Intent intent = new Intent(DetailInfoActivity.this,
-					MyFavouriteActivity.class);
-			startActivity(intent);
-		} else if (item.getItemId() == R.id.home_menu) {
-			Intent intent = new Intent(DetailInfoActivity.this,
-					ListCategoriesActivity.class);
-			startActivity(intent);
-		} else if (item.getItemId() == R.id.quit_menu) {
-			// Intent intent = new Intent(Intent.ACTION_MAIN);
-			// intent.addCategory(Intent.CATEGORY_HOME);
-			// intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			// startActivity(intent);
-			// Process.killProcess(Process.myPid());
-			Intent intent = new Intent(DetailInfoActivity.this,
-					MainActivity.class);
-			CommonConfiguration.IS_QUIT = true;
-			startActivity(intent);
-		}
-		return super.onOptionsItemSelected(item);
-	}
-	*/
-
+	
 	//** Method of interface Runable *//*
 	@Override
 	public void run() {
@@ -598,4 +567,26 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 		// TODO Auto-generated method stub
 		
 	}*/
+	
+	//Create menu
+			
+			@Override			
+			public boolean onOptionsItemSelected(MenuItem item) {
+				// TODO Auto-generated method stub
+				if(item.getItemId()==R.id.mnOptionHome)
+				{
+					Intent intent = new Intent(DetailInfoActivity.this, ListCategoriesActivity.class);
+					startActivity(intent);			
+				}
+				if(item.getItemId()==R.id.mnOptionFavourite)
+				{
+					Intent intent = new Intent(DetailInfoActivity.this, MyFavouriteActivity.class);
+					startActivity(intent);			
+				}
+				if(item.getItemId()==R.id.mnOptionBack)
+				{
+					onBackPressed();
+				}
+				return super.onOptionsItemSelected(item);
+			}	
 }

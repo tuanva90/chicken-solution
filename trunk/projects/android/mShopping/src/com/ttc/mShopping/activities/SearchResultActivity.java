@@ -38,7 +38,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class SearchResultActivity extends Activity implements LocationListener,
+public class SearchResultActivity extends TemplateActivity implements LocationListener,
 		Runnable {
 
 	/* Define ListView */
@@ -181,6 +181,7 @@ public class SearchResultActivity extends Activity implements LocationListener,
 		SimpleAdapter simpleAdapter = new SimpleAdapter(this, resultList,
 				R.layout.row_search_result, from, to);
 		// Display list
+		Log.v("listview", String.valueOf(resultList.size()));
 		listResult.setAdapter(simpleAdapter);
 
 		// Handle item click event
@@ -284,6 +285,7 @@ public class SearchResultActivity extends Activity implements LocationListener,
 		getLatitudeLongitude();
 		getSearchResultList(latitude, longitude, query);
 		handler.sendEmptyMessage(0);
+		Log.v("SUCCESS", "Get result success");
 	}
 
 	/** Handler for handling message from method run() */
@@ -384,4 +386,25 @@ public class SearchResultActivity extends Activity implements LocationListener,
 		});
 
 	}
+	
+	//Create menu	
+		@Override
+		public boolean onOptionsItemSelected(MenuItem item) {
+			// TODO Auto-generated method stub
+			if(item.getItemId()==R.id.mnOptionHome)
+			{
+				Intent intent = new Intent(SearchResultActivity.this, ListCategoriesActivity.class);
+				startActivity(intent);			
+			}
+			if(item.getItemId()==R.id.mnOptionFavourite)
+			{
+				Intent intent = new Intent(SearchResultActivity.this, MyFavouriteActivity.class);
+				startActivity(intent);			
+			}
+			if(item.getItemId()==R.id.mnOptionBack)
+			{
+				onBackPressed();
+			}
+			return super.onOptionsItemSelected(item);
+		}
 }

@@ -18,7 +18,7 @@
         android:layout_width="fill_parent"
         android:layout_height="405dp"
         android:layout_below="@id/tt_map"
-        android:apiKey="0b9YYwJOIuqOnj-MHNSSzpLh-JtmrR8fCeoyD8Q"
+        android:apiKey="0o9sxnyrRUCJINyhlraUjZUMBnsaMgEl6y0fxjQ"
         android:clickable="true" />
 
    
