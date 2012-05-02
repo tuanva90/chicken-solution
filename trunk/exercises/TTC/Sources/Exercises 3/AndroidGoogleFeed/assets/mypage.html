@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+
+    google.load("feeds", "1");
+
+    function initialize() {
+      var feed = new google.feeds.Feed("http://feeds.bbci.co.uk/news/technology/rss.xml?edition=uk");
+      feed.setNumEntries(10);
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var div = document.createElement("div");
+
+            var A = document.createElement("A");  
+            A.setAttribute("href",entry.link);  
+            A.appendChild(document.createTextNode(entry.title));  
+            div.appendChild(A);
+            
+            container.appendChild(div);
+          }
+        }
+      });
+    }
+    
+    google.setOnLoadCallback(initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="feed"></div>
+  </body>
+</html>
