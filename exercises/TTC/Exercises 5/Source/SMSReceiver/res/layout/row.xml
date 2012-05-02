@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/txtFROM"
+        android:layout_width="185dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/txtSMS"
+        android:ellipsize="marquee"
+        android:maxLines="2"
+        android:text="Simple application that"
+        android:textColor="#03b2f3"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtSMS"
+        android:layout_width="185dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtFROM"
+        android:layout_marginLeft="70dp"
+        android:ellipsize="marquee"
+        android:maxLines="2"
+        android:text="Simple application that"
+        android:textColor="#b3adad"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_alignBaseline="@+id/txtSMS"
+        android:layout_alignBottom="@+id/txtSMS"
+        android:layout_alignParentLeft="true"
+        android:textColor="#b3adad"
+        android:text="MSG: " />
+
+    <TextView
+        android:id="@+id/tvdelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txtSMS"
+        android:text="delele"
+        android:textColor="#e9f01a" />
+
+</RelativeLayout>
