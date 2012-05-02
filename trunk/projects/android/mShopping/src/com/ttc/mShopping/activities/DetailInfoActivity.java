@@ -357,12 +357,12 @@ public class DetailInfoActivity extends Activity implements OnClickListener,
 	@Override
 	public void onClick(View v) {
 		if (v == btnViewWeb) { // Click on button ViewWeb
-			/*Bundle bundle = new Bundle();
+			Bundle bundle = new Bundle();
 			bundle.putString(CommonConfiguration.URL_TO_WEB, item.getUrl());
 			Intent intent = new Intent(DetailInfoActivity.this,
 					ViewWebActivity.class);
 			intent.putExtras(bundle);
-			startActivity(intent);*/
+			startActivity(intent);
 		} else if (v == btnViewMap) { // Click on button ViewMap
 			Bundle bundle = new Bundle();
 

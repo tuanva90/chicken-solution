@@ -38,10 +38,11 @@
         		  android:label="@string/app_name"
         		  android:windowSoftInputMode="adjustPan">        
         </activity>	
-        <activity android:name="GetDirectionActivity"
+        <activity android:name=".GetDirectionActivity"
         		  android:label="@string/app_name"
         		  android:windowSoftInputMode="adjustPan"> 
         		   </activity>	
+        <activity android:name=".ViewWebActivity"></activity>
     </application>
 		<uses-permission android:name="android.permission.INTERNET" />
 		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />  
