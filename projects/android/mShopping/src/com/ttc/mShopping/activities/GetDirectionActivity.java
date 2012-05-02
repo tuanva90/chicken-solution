@@ -27,7 +27,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class GetDirectionActivity extends Activity {
+public class GetDirectionActivity extends TemplateActivity {
 	private ListResult listLocation; // ListREsult
 	private Spinner ddlToLocation;//spinner to location ( using to direct from location to another location)
 	private Spinner ddlFromLocation;////spinner from location ( using to direct from location to another location)
@@ -139,4 +139,25 @@ public class GetDirectionActivity extends Activity {
 		public void onNothingSelected(AdapterView<?> arg0) {
 		}
 	};
+	
+	//Create menu			
+			@Override
+			public boolean onOptionsItemSelected(MenuItem item) {
+				// TODO Auto-generated method stub
+				if(item.getItemId()==R.id.mnOptionHome)
+				{
+					Intent intent = new Intent(GetDirectionActivity.this, ListCategoriesActivity.class);
+					startActivity(intent);			
+				}
+				if(item.getItemId()==R.id.mnOptionFavourite)
+				{
+					Intent intent = new Intent(GetDirectionActivity.this, MyFavouriteActivity.class);
+					startActivity(intent);			
+				}
+				if(item.getItemId()==R.id.mnOptionBack)
+				{
+					onBackPressed();
+				}
+				return super.onOptionsItemSelected(item);
+			}
 }
