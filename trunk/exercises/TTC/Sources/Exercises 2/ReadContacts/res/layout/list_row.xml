@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+ 
+    
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip">
+ 		
+        <ImageView
+            android:id="@+id/imgContactRowPhoto"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@android:drawable/ic_lock_lock"/>
+ 
+    </LinearLayout>
+ 
+    <!-- Name display-->
+    <TextView
+        android:id="@+id/txtContactRowName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:textStyle="bold"/>
+ 
+    <!-- Phone display -->
+    <TextView
+        android:id="@+id/txtContactRowPhone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtContactRowName"
+        android:textColor="#ffffff"
+        android:textSize="10dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="No phone number..." />
+ 
+   
+</RelativeLayout>
