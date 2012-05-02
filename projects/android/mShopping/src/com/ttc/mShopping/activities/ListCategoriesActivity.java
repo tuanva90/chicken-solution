@@ -10,9 +10,6 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.ttc.mShopping.adapters.GridViewAdapter;
 import com.ttc.mShopping.utils.CommonConfiguration;
 
@@ -65,58 +62,7 @@ public class ListCategoriesActivity extends Activity {
 		public void onItemClick(AdapterView<?> parent, View v, int position,
 				long id) {
 			// TODO Auto-generated method stub
-			Bundle bundle = new Bundle();
-			TextView txtv = (TextView)v.findViewById(R.id.grid_item_label);
-			ImageView igv = (ImageView)v.findViewById(R.id.grid_item_image);
-			
-			if(txtv.getText().equals(CommonConfiguration.favorites))
-			{
-				
-			}
-			else
-			{
-				if(txtv.getText().equals(CommonConfiguration.settings))
-				{
-					
-				}
-			
-				else
-				{
-					if(txtv.getText().equals(CommonConfiguration.babystore))
-					{
-						bundle.putString(CommonConfiguration.QUERY,CommonConfiguration.BABY_STORE);
-						bundle.putInt(CommonConfiguration.IQUERY, CommonConfiguration.Ibabystore);
-					}
-					else
-					{
-						if(txtv.getText().equals(CommonConfiguration.bookstore))
-						{
-							bundle.putString(CommonConfiguration.QUERY,CommonConfiguration.BOOK_STORE);
-							bundle.putInt(CommonConfiguration.IQUERY, CommonConfiguration.Ibookstore);
-						}
-						else
-						{
-							if(txtv.getText().equals(CommonConfiguration.clothingstore))
-							{
-								bundle.putString(CommonConfiguration.QUERY,CommonConfiguration.CLOTHING_STORE);
-								bundle.putInt(CommonConfiguration.IQUERY, CommonConfiguration.Icothingstore);
-							}
-							else
-							{
-								if(txtv.getText().equals(CommonConfiguration.mallshopping))
-								{
-									bundle.putString(CommonConfiguration.QUERY,CommonConfiguration.MALL_SHOPPING);
-									bundle.putInt(CommonConfiguration.IQUERY, CommonConfiguration.Imallshopping);
-								}						
-							}
-						}
-					}					
-					Intent intent = new Intent(ListCategoriesActivity.this, SearchResultActivity.class);
-					intent.putExtras(bundle);
-					startActivity(intent);
-				}
-				
-			}
+
 		}
 
 	};
