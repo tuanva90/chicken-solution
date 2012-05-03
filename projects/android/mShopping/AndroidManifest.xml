@@ -43,6 +43,8 @@
         		  android:windowSoftInputMode="adjustPan"> 
         		   </activity>	
         <activity android:name=".ViewWebActivity"></activity>
+        <activity android:name=".MyFavouriteActivity"></activity>
+        <activity android:name=".FavouriteDetailInfoActivity"></activity>
     </application>
 		<uses-permission android:name="android.permission.INTERNET" />
 		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />  
