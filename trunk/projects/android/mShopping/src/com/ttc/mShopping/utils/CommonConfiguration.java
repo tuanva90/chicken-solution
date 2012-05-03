@@ -29,31 +29,26 @@ public class CommonConfiguration {
 	public static final String SEARCH_RESULT_ID = "searchResultId";
 	public static final String URL_TO_WEB = "urlToWeb";
 		
-	public static final String GAS_STATION_FIXED = "gas station";
-	
-	public static final String babystore = "Baby Store";
-	public static final String bookstore = "Book Store";
-	public static final String atms = "ATM";
-	public static final String clothingstore = "Clothing Store";
-	public static final String mallshopping = "Mall and Shopping";
-	public static final String banks = "Bank";
+		
+	public static final String babystore = "Baby Stores";
+	public static final String bookstore = "Book Stores";
+	public static final String clothingstore = "Clothing Stores";
+	public static final String mallshopping = "Malls";
+	public static final String shoppingcenter = "Shopping Centers";
 	public static final String favorites = "Favorites";
 	public static final String settings = "Settings";
 	public static final String BOOK_STORE = "book+store";
 	public static final String BABY_STORE = "baby+store";
-	public static final String ATM = "atm";
-	public static final String BANK = "bank";
 	public static final String CLOTHING_STORE = "clothing+store";
-	public static final String MALL_SHOPPING = "mall+shopping";
+	public static final String MALL_SHOPPING = "malls";
+	public static final String SHOPPING_CENTER = "shopping+center";
 	
 	public static final int Ibabystore = 1;
 	public static final int Ibookstore = 2;
 	public static final int Iatm = 3;
 	public static final int Icothingstore = 4;
-	public static final int Imallshopping = 5;
-	public static final int Ibank = 6;
-	public static final int IAIRPORT = 7;
-	public static final int IPLACE = 8;
+	public static final int Imallshopping = 6;
+	public static final int Ishoppingcenter = 5;
 
 	/* */
 	public static final String VIEW_NAME = "viewName";
