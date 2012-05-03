@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#333333"
+    android:background="@drawable/bg_480x800"
     android:orientation="vertical" >
 
     <!-- Header  Starts -->
@@ -26,14 +26,7 @@
             android:textColor="#ffffff"
             android:textSize="18dip"
             android:textStyle="bold" />
-        <Button
-        android:id="@+id/btntestbabystore"
-        android:layout_width="80dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="2dp"
-        android:text="test"
-         />
-                 
+       
         <!-- Logo Ends -->
     </LinearLayout>
     <!-- Header Ends -->

@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:layout_marginTop="65dp"
-    android:background="@android:color/transparent"
+    android:background="@drawable/list_selector"
     android:padding="3dp" >
 
     <!-- Row address -->
@@ -16,8 +16,8 @@
         android:layout_marginLeft="30dp"
         android:ellipsize="marquee"
         android:maxLines="2"
-        android:text="Simple application that shows how to use RelativeLayout1111111111111111"
-        android:textColor="#03b2f3"
+        android:text="Simple application that shows how to use RelativeLayout"
+        android:textColor="#343434"
         android:textSize="12sp" />
 
     <!-- Row name -->
@@ -32,8 +32,8 @@
         android:layout_marginLeft="15dp"
         android:gravity="center_vertical"
         android:singleLine="true"
-        android:text="Ngan Hang Sacombank11111111111111111111111111111111111"
-        android:textColor="#ffffff"
+        android:text="Ngan Hang Sacombank"
+        android:textColor="#040404"
         android:textSize="13sp"
         android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="16dp"
-        android:src="@drawable/next_18x18" />
+        android:src="@drawable/arrow" />
 
     <!-- Distance -->
 
@@ -63,7 +63,7 @@
         android:gravity="center_vertical"
         android:singleLine="true"
         android:text="1000 km"
-        android:textColor="#d2a1ac"
+        android:textColor="#10bcc9"
         android:textSize="12sp"
         android:textStyle="bold" />
 

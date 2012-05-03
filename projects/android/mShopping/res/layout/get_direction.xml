@@ -5,20 +5,32 @@
     android:layout_height="fill_parent"
     android:background="@drawable/bg_480x800"
     android:orientation="vertical" >
+<!-- Header  Starts -->
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        android:id="@+id/header"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@layout/header_gradient"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
 
-        <!-- Title -->
+        <!-- Logo Start -->
 
-        <ImageView
-            android:id="@+id/tt_categories"
+        <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/tt_getdirection_480x70" />
-    </RelativeLayout>
+            android:gravity="center"
+            android:text="Get Direction"
+            android:textColor="#ffffff"
+            android:textSize="18dip"
+            android:textStyle="bold" />
+
+        <!-- Logo Ends -->
+    </LinearLayout>
+    <!-- Header Ends -->
+
 
     <!-- Result list -->
 
@@ -40,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:text="Select places from the drop-down lists below then click the button Show Map. You&apos;ll know the driving direction from start-point to end-point."
             android:textColor="#ffffff"
             android:textSize="16sp"
@@ -80,11 +92,12 @@
 
         <Button
             android:id="@+id/btnGetRoute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="Show map"
+            android:layout_width="116dp"
+            android:layout_height="36dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="400dp"
-            android:background="@drawable/btn_selector_showmap" />
+            android:background="@drawable/shape_special_item_hight_light" />
     </RelativeLayout>
 
 </LinearLayout>
