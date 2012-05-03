@@ -3,10 +3,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-   android:background="@drawable/bg_480x800"
+    android:background="@drawable/bg_480x800"
     android:orientation="vertical" >
 
-       <!-- Header  Starts -->
+    <!-- Header  Starts -->
 
     <LinearLayout
         android:id="@+id/header"
@@ -32,6 +32,7 @@
     </LinearLayout>
     <!-- Header Ends -->
 
+
     <!-- Result list -->
 
     <RelativeLayout
@@ -39,40 +40,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
-        <ImageView
-            android:id="@+id/favourite_listResultContentWrapper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/content_wrap_480x640" />
-
-        <TextView
-            android:id="@+id/favourite_txtViewShortDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_gravity="center"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="10dp"
-            android:text="Description"
-            android:textColor="#e2d821"
-            android:textSize="15sp"
-            android:textStyle="bold" >
-        </TextView>
-
-        <TextView
-            android:id="@+id/favourite_txtViewDistance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="10dp"
-            android:text="Distance"
-            android:textColor="#e2d821"
-            android:textSize="15sp"
-            android:textStyle="bold" >
-        </TextView>
+        
 
         <ListView
             android:id="@+id/favourite_listResult"
@@ -88,22 +56,22 @@
 
         <Button
             android:id="@+id/favourite_btnClearAll"
-            android:text="Delete All"
             android:layout_width="116dp"
             android:layout_height="36dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="435dp"
-            android:background="@drawable/shape_special_item_hight_light" />
+            android:layout_marginTop="425dp"
+            android:background="@drawable/shape_special_item_hight_light"
+            android:text="Delete All" />
 
         <Button
-              android:id="@+id/favourite_btnDirection"
-            android:text="Direction"
+            android:id="@+id/favourite_btnDirection"
             android:layout_width="116dp"
             android:layout_height="36dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="435dp"
+            android:layout_marginTop="425dp"
             android:layout_toRightOf="@id/favourite_btnClearAll"
-            android:background="@drawable/shape_special_item_hight_light" />
-          </RelativeLayout>
+            android:background="@drawable/shape_special_item_hight_light"
+            android:text="Direction" />
+    </RelativeLayout>
 
 </LinearLayout>
