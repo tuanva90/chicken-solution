@@ -64,11 +64,11 @@ public class ListCategoriesActivity extends TemplateActivity {
 			}
 			else
 			{
-				if(txtv.getText().equals(CommonConfiguration.settings))
+				if(txtv.getText().equals(CommonConfiguration.shoppingcenter))
 				{
-					
-				}
-			
+					bundle.putString(CommonConfiguration.QUERY,CommonConfiguration.SHOPPING_CENTER);
+					bundle.putInt(CommonConfiguration.IQUERY, CommonConfiguration.Ishoppingcenter);
+				}			
 				else
 				{
 					if(txtv.getText().equals(CommonConfiguration.babystore))
@@ -100,11 +100,11 @@ public class ListCategoriesActivity extends TemplateActivity {
 							}
 						}
 					}					
-					Intent intent = new Intent(ListCategoriesActivity.this, SearchResultActivity.class);
-					intent.putExtras(bundle);
-					startActivity(intent);
+					
 				}
-				
+				Intent intent = new Intent(ListCategoriesActivity.this, SearchResultActivity.class);
+				intent.putExtras(bundle);
+				startActivity(intent);
 			}
 		}
 
@@ -116,16 +116,14 @@ public class ListCategoriesActivity extends TemplateActivity {
 		listLabel.add(CommonConfiguration.bookstore);
 		listLabel.add(CommonConfiguration.clothingstore);
 		listLabel.add(CommonConfiguration.mallshopping);
-		//listLabel.add(CommonConfiguration.atms);
 		listLabel.add(CommonConfiguration.favorites);
-		listLabel.add(CommonConfiguration.settings);
+		listLabel.add(CommonConfiguration.shoppingcenter);
 
 		listImage = new ArrayList<Integer>();
 		listImage.add(R.drawable.iconbaby);
 		listImage.add(R.drawable.iconbook);
 		listImage.add(R.drawable.iconclothing);
 		listImage.add(R.drawable.iconmallshopping);
-		//listImage.add(R.drawable.iconatm);
 		listImage.add(R.drawable.iconfavorite);
 		listImage.add(R.drawable.iconsetting);
 

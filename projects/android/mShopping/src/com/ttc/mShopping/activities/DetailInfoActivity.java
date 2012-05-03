@@ -161,20 +161,16 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 		case CommonConfiguration.Ibookstore:
 			imgCategory.setImageResource(R.drawable.iconbook);
 			break;
-		/*case CommonConfiguration.Iatm:
-			imgCategory.setImageResource(R.drawable.iconatm);
-			break;
-			*/
 		case CommonConfiguration.Ibabystore:
 			imgCategory.setImageResource(R.drawable.iconbaby);
-			break;
-		case CommonConfiguration.Ibank:
-			imgCategory.setImageResource(R.drawable.iconbank);
 			break;
 		case CommonConfiguration.Icothingstore:
 			imgCategory.setImageResource(R.drawable.iconclothing);
 			break;
 		case CommonConfiguration.Imallshopping:
+			imgCategory.setImageResource(R.drawable.iconmallshopping);
+			break;
+		case CommonConfiguration.Ishoppingcenter:
 			imgCategory.setImageResource(R.drawable.iconmallshopping);
 			break;
 		}
