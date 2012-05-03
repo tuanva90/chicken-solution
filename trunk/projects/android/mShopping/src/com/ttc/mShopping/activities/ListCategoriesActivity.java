@@ -59,7 +59,8 @@ public class ListCategoriesActivity extends TemplateActivity {
 			
 			if(txtv.getText().equals(CommonConfiguration.favorites))
 			{
-				
+				Intent intent = new Intent(ListCategoriesActivity.this, MyFavouriteActivity.class);
+				startActivity(intent);
 			}
 			else
 			{

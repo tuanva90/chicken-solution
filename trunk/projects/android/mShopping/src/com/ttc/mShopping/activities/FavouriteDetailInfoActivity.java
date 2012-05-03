@@ -46,8 +46,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class DetailInfoActivity extends TemplateActivity implements OnClickListener,
+public class FavouriteDetailInfoActivity extends TemplateActivity implements OnClickListener,
 		Runnable {
 	// Components on layout
 	private ImageView imgCategory;
@@ -129,7 +130,7 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 
 		} catch (Exception e) {
 			AlertDialog.Builder alertDialog = new AlertDialog.Builder(
-					DetailInfoActivity.this);
+					FavouriteDetailInfoActivity.this);
 			alertDialog.setTitle("Error");
 			alertDialog.setMessage(e.toString());
 			alertDialog.setPositiveButton("Ok", null);
@@ -140,21 +141,21 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 
 	/** Display view on screen */
 	private void displayContent(int iquery) {
-		tvCategory = (TextView) findViewById(R.id.txtViewCategoryDetail);
+		tvCategory = (TextView) findViewById(R.id.favourite_txtViewCategoryDetail);
 		tvCategory.setText(item.getTitleNoFormatting().toUpperCase());
 
-		imgCategory = (ImageView) findViewById(R.id.imgCategoryDetail);
-		btnViewWeb = (Button) findViewById(R.id.btnWeb);
+		imgCategory = (ImageView) findViewById(R.id.favourite_imgCategoryDetail);
+		btnViewWeb = (Button) findViewById(R.id.favourite_btnWeb);
 		btnViewWeb.setOnClickListener(this);
 
-		btnViewMap = (Button) findViewById(R.id.btnShowMapDetail);
+		btnViewMap = (Button) findViewById(R.id.favourite_btnShowMapDetail);
 		btnViewMap.setOnClickListener(this);
 		
-		btnEmail = (Button) findViewById(R.id.btnEmail);
+		btnEmail = (Button) findViewById(R.id.favourite_btnEmail);
 		btnEmail.setOnClickListener(this);
 
 		 //button add favourite
-		btnFavourite = (Button) findViewById(R.id.btnFavourite);
+		btnFavourite = (Button) findViewById(R.id.favourite_btnFavourite);
 		btnFavourite.setOnClickListener(this);
 
 		switch (iquery) {
@@ -182,7 +183,7 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 
 	/** Display detail */
 	private void displayListView() {
-		listDetail = (ListView) findViewById(R.id.list);
+		listDetail = (ListView) findViewById(R.id.favourite_list);
 		mInflater = (LayoutInflater) getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
 		rowData = new Vector<RowData>();
 
@@ -251,7 +252,7 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 					}
 				} catch (Exception e) {
 					AlertDialog.Builder alertDialog = new AlertDialog.Builder(
-							DetailInfoActivity.this);
+							FavouriteDetailInfoActivity.this);
 					alertDialog.setTitle("Error");
 					alertDialog.setMessage(e.toString());
 					alertDialog.setPositiveButton("Ok", null);
@@ -357,7 +358,7 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 		if (v == btnViewWeb) { // Click on button ViewWeb
 			Bundle bundle = new Bundle();
 			bundle.putString(CommonConfiguration.URL_TO_WEB, item.getUrl());
-			Intent intent = new Intent(DetailInfoActivity.this,
+			Intent intent = new Intent(FavouriteDetailInfoActivity.this,
 					ViewWebActivity.class);
 			intent.putExtras(bundle);
 			startActivity(intent);
@@ -367,7 +368,7 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 			bundle.putSerializable(CommonConfiguration.RESPECT_LOCATION, item);
 			bundle.putSerializable(CommonConfiguration.SEARCH_RESULT_LIST,
 					listItem);
-			Intent intent = new Intent(DetailInfoActivity.this,
+			Intent intent = new Intent(FavouriteDetailInfoActivity.this,
 					ViewMapActivity.class);
 			intent.putExtras(bundle);
 			startActivity(intent);
@@ -428,20 +429,20 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 
 					// check if it exists in db, if not then insert, else do
 					// nothing
-					if (mDbAdapter.checkIfExist(strLat, strLng, strAddress) == false) {
+					if (mDbAdapter.checkIfExist(strLat, strLng, strAddress) == true) {
 						// mDBAdapter.insertItem(strName,
 						// strAddress,"phone","lat","lng","999","url","0");
 						Log.i("checkIfExist", " Details - checkIfExist false");
-						mDbAdapter.insertItem(strName, strAddress, strPhone,
-								strLat, strLng, strRating, strDistance, strUrl,
-								strIdc);
+						if(mDbAdapter.deleteItem(strLat, strLng, strAddress))
+						{
 
 						// Create the alert box
 						AlertDialog.Builder alertbox = new AlertDialog.Builder(
-								DetailInfoActivity.this);
+								FavouriteDetailInfoActivity.this);
 
 						// Set the message to display
-						alertbox.setMessage("Add favourite successfully!");
+						alertbox.setCancelable(true);						
+						alertbox.setMessage("Deleted the favourite success!");
 
 						// Add a neutral button to the alert box and assign a
 						// click listener
@@ -451,19 +452,23 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 									// alert box
 									public void onClick(DialogInterface arg0,
 											int arg1) {
-
+										
 									}
 								});
+					
 						// show alert box
 						alertbox.show();
+						Intent intent = new Intent(FavouriteDetailInfoActivity.this, MyFavouriteActivity.class);
+						startActivity(intent);
+						}
 					} else {
 						Log.i("checkIfExist", " Details - checkIfExist true");
 						// Create the alert box
 						AlertDialog.Builder alertbox = new AlertDialog.Builder(
-								DetailInfoActivity.this);
+								FavouriteDetailInfoActivity.this);
 
 						// Set the message to display
-						alertbox.setMessage("This place existed in your favourite list!");
+						alertbox.setMessage("This place did not exist in your favourite list!");
 
 						// Add a neutral button to the alert box and assign a
 						// click listener
@@ -539,7 +544,7 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 			}
 		} catch (Exception e) {
 			AlertDialog.Builder alertDialog = new AlertDialog.Builder(
-					DetailInfoActivity.this);
+					FavouriteDetailInfoActivity.this);
 			alertDialog.setTitle("Error");
 			alertDialog.setMessage(e.toString());
 			alertDialog.setPositiveButton("Ok", null);
@@ -555,7 +560,7 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 			// dismiss dialog
 			progressDialog.dismiss();
 			// set layout
-			setContentView(R.layout.details);
+			setContentView(R.layout.favourite_details);
 
 			displayContent(iquery);
 			displayListView();
@@ -571,12 +576,6 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 		super .onDestroy();
 	};
 
-	/*@Override
-	public void onClick(View arg0) {
-		// TODO Auto-generated method stub
-		
-	}*/
-	
 	//Create menu
 			
 			@Override			
@@ -584,12 +583,12 @@ public class DetailInfoActivity extends TemplateActivity implements OnClickListe
 				// TODO Auto-generated method stub
 				if(item.getItemId()==R.id.mnOptionHome)
 				{
-					Intent intent = new Intent(DetailInfoActivity.this, ListCategoriesActivity.class);
+					Intent intent = new Intent(FavouriteDetailInfoActivity.this, ListCategoriesActivity.class);
 					startActivity(intent);			
 				}
 				if(item.getItemId()==R.id.mnOptionFavourite)
 				{
-					Intent intent = new Intent(DetailInfoActivity.this, MyFavouriteActivity.class);
+					Intent intent = new Intent(FavouriteDetailInfoActivity.this, MyFavouriteActivity.class);
 					startActivity(intent);			
 				}
 				if(item.getItemId()==R.id.mnOptionBack)
