@@ -4,15 +4,32 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-    <!-- Title -->
+    <!-- Header  Starts -->
 
-    <ImageView
+    <LinearLayout
         android:id="@+id/tt_map"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/tt_map_480x70" />
+        android:background="@layout/header_gradient"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
 
-  
+        <!-- Logo Start -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Map"
+            android:textColor="#ffffff"
+            android:textSize="18dip"
+            android:textStyle="bold" />
+
+        <!-- Logo Ends -->
+    </LinearLayout>
+    <!-- Header Ends -->
+
     <com.google.android.maps.MapView
         android:id="@+id/map"
         android:layout_width="fill_parent"
@@ -21,30 +38,33 @@
         android:apiKey="0o9sxnyrRUCJINyhlraUjZUMBnsaMgEl6y0fxjQ"
         android:clickable="true" />
 
-   
     <Button
         android:id="@+id/btnDirection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:text="Direction"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="455dp"
-        android:background="@drawable/btn_selector_direction" />
-     <Button
+        android:background="@drawable/shape_special_item_hight_light" />
+
+    <Button
         android:id="@+id/btnEng"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:text="English"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
         android:layout_marginRight="5px"
         android:layout_marginTop="455dp"
         android:layout_toLeftOf="@id/btnDirection"
-        android:background="@drawable/btn_selector_en" />
+        android:background="@drawable/shape_special_item_hight_light" />
 
     <Button
         android:id="@+id/btnVni"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:text="Vietnamese"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
         android:layout_marginLeft="5px"
         android:layout_marginTop="455dp"
         android:layout_toRightOf="@id/btnDirection"
-        android:background="@drawable/btn_selector_vi" />
+        android:background="@drawable/shape_special_item_hight_light" />
 
-   </RelativeLayout>
+</RelativeLayout>

@@ -3,35 +3,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-   android:background="@drawable/bg_480x800"
+    android:background="@drawable/bg_480x800"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <!-- Header  Starts -->
+
+    <LinearLayout
+        android:id="@+id/header"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@layout/header_gradient"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
 
-        <!-- Title -->
-
-        <ImageView
-            android:id="@+id/tt_categories"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-			android:src="@drawable/tt_searchresults_480x70"
-			/>
+        <!-- Logo Start -->
 
         <TextView
-            android:id="@+id/txtViewCategory"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="27dp"
-            android:text="CATEGORY BANK"
-            android:textColor="#1be1e8"
-            android:textSize="13sp"
-            android:textStyle="bold" >
-        </TextView>
-    </RelativeLayout>
+            android:gravity="center"
+            android:text="Search Result"
+            android:textColor="#ffffff"
+            android:textSize="18dip"
+            android:textStyle="bold" />
+
+        <!-- Logo Ends -->
+    </LinearLayout>
+    <!-- Header Ends -->
+
 
     <!-- Result list -->
 
@@ -40,41 +40,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
-        <ImageView
-            android:id="@+id/listResultContentWrapper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/content_wrap_480x640" />
-
-        <TextView
-            android:id="@+id/txtViewShortDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_gravity="center"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="10dp"
-            android:text="Description"
-            android:textColor="#e2d821"
-            android:textSize="15sp"
-            android:textStyle="bold" >
-        </TextView>
-
-        <TextView
-            android:id="@+id/txtViewDistance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="10dp"
-            android:text="Distance"
-            android:textColor="#e2d821"
-            android:textSize="15sp"
-            android:textStyle="bold" >
-        </TextView>
-
+        
         <ListView
             android:id="@+id/listResult"
             android:layout_width="fill_parent"
@@ -89,20 +55,22 @@
 
         <Button
             android:id="@+id/btnShowMap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="Show map"
+            android:layout_width="116dp"
+            android:layout_height="36dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="400dp"
-            android:background="@drawable/btn_selector_showmap" />
+            android:layout_marginTop="435dp"
+            android:background="@drawable/shape_special_item_hight_light" />
 
         <Button
             android:id="@+id/btnDirection"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="Direction"
+            android:layout_width="116dp"
+            android:layout_height="36dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="435dp"
             android:layout_toRightOf="@id/btnShowMap"
-            android:background="@drawable/btn_selector_direction" />
+            android:background="@drawable/shape_special_item_hight_light" />
     </RelativeLayout>
-
+	
 </LinearLayout>

@@ -26,7 +26,6 @@ public class ListCategoriesActivity extends TemplateActivity {
 	private GridViewAdapter mAdapter;
 	private ArrayList<String> listLabel;
 	private ArrayList<Integer> listImage;
-	private Button atm;
 	
 
 	private GridView gridView;
@@ -35,22 +34,7 @@ public class ListCategoriesActivity extends TemplateActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.categories);
-		atm =(Button) findViewById(R.id.btntestbabystore);
-		atm.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Bundle bundle = new Bundle();
-				bundle.putString(CommonConfiguration.QUERY,CommonConfiguration.BOOK_STORE);
-				bundle.putInt(CommonConfiguration.IQUERY, CommonConfiguration.Ibookstore);
-				Intent intent = new Intent(ListCategoriesActivity.this, SearchResultActivity.class);
-				intent.putExtras(bundle);
-				startActivity(intent);
-				
-				
-			}
-		});
+		
 		prepareList();
 
 		// prepared arraylist and passed it to the Adapter class
