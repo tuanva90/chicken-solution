@@ -91,7 +91,10 @@ public class SearchResultActivity extends TemplateActivity implements LocationLi
 		progressDialog = new ProgressDialog(this);
 		progressDialog.setMessage("Searching...");
 		progressDialog.show();
-
+		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		// Provider is GPS
+		provider = LocationManager.GPS_PROVIDER;
+		locationManager.requestLocationUpdates( LocationManager.GPS_PROVIDER, 0, 0, this);	
 		// Create thread and start it
 		Thread thread = new Thread(this);
 		thread.start();
@@ -218,29 +221,26 @@ public class SearchResultActivity extends TemplateActivity implements LocationLi
 	/** Get latitude and longitude */
 	private void getLatitudeLongitude() {
 		if (!isCustomLocation) { // if not change location
-			// Get the location manager
-			locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-			// Provider is GPS
-			provider = LocationManager.GPS_PROVIDER;
-			//Location location = locationManager.getLastKnownLocation(provider);
+			
+			Location location = locationManager.getLastKnownLocation(provider);
 			// Initialize the location fields
-			//if (location != null) {
-				//this.latitude = location.getLatitude();
-			//	this.longitude = location.getLongitude();
-			//} else {
+			if (location != null) {
+				this.latitude = location.getLatitude();
+				this.longitude = location.getLongitude();
+			} else {
 				this.latitude = CommonConfiguration.LATITUDE;
 				this.longitude = CommonConfiguration.LONGITUDE;
-			//}
+			}
+			Log.v("GPS",String.valueOf(this.latitude));
 		}
 	}
 
 	/** Method of interface LocationListener */
 	@Override
 	public void onLocationChanged(Location location) {
+		Log.v("GPS",location.toString());
 		getLatitudeLongitude();
-		getSearchResultList(latitude, longitude, query);
-		Log.i(CommonConfiguration.TAG, "Change: " + String.valueOf(latitude)
-				+ " - " + String.valueOf(longitude));
+		getSearchResultList(latitude, longitude, query);		
 		displayListView();
 	}
 
@@ -268,10 +268,11 @@ public class SearchResultActivity extends TemplateActivity implements LocationLi
 	@Override
 	public void run() {
 		// get latitude, longitude and list of SearchResults
+		// Get the location manager				
 		getLatitudeLongitude();
 		getSearchResultList(latitude, longitude, query);
 		handler.sendEmptyMessage(0);
-		Log.v("SUCCESS", "Get result success");
+		Log.v("GPS", "Get result success");
 	}
 
 	/** Handler for handling message from method run() */
