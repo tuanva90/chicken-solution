@@ -6,16 +6,29 @@
     android:background="@drawable/bg_480x800"
     android:orientation="vertical" >
 
-    <!-- Title -->
-
-    <ImageView
-        android:id="@+id/favourite_tt_categories"
+  <LinearLayout
+        android:id="@+id/header"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/tt_details_480x70" />
+        android:background="@layout/header_gradient"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
 
-    <!-- Result list -->
+        <!-- Logo Start -->
 
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Detail"
+            android:textColor="#ffffff"
+            android:textSize="18dip"
+            android:textStyle="bold" />
+
+        <!-- Logo Ends -->
+    </LinearLayout>
+    <!-- Header Ends -->
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -64,43 +77,46 @@
             android:dividerHeight="5dp" >
         </ListView>
 
-        <!-- Button -->
+          <Button
+           android:id="@+id/favourite_btnFavourite"
+            android:text="Delete"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="415dp"
+            android:background="@drawable/shape_special_item_hight_light" />
 
-        <Button
-            android:id="@+id/favourite_btnFavourite"
-            android:layout_width="wrap_content"
+		<Button
+             android:id="@+id/favourite_btnEmail"
+           	android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="395dp"
-            android:background="@drawable/btn_removeselector_favourite" />
-
+            android:layout_marginTop="415dp"
+            android:background="@drawable/shape_special_item_hight_light" />
+        
         <Button
-            android:id="@+id/favourite_btnEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="395dp"
-            android:layout_toLeftOf="@id/favourite_btnFavourite"
-            android:background="@drawable/btn_selector_email" />
-
-        <Button
-            android:id="@+id/favourite_btnWeb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+             android:id="@+id/favourite_btnWeb"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="395dp"
-            android:background="@drawable/btn_selector_web" />
+            android:layout_marginTop="415dp"
+            android:background="@drawable/shape_special_item_hight_light"
+            android:text="Web" />
 
         <Button
             android:id="@+id/favourite_btnShowMapDetail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="395dp"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="415dp"
             android:layout_toRightOf="@id/favourite_btnWeb"
-            android:background="@drawable/btn_selector_showmap" />
+            android:background="@drawable/shape_special_item_hight_light"
+            android:text="Show map" />
     </RelativeLayout>
 
 </LinearLayout>
