@@ -99,43 +99,27 @@ public class SearchResultActivity extends TemplateActivity implements LocationLi
 
 	/** Display category text */
 	private void displayText(int iquery) {
-	/*	txtViewCategory = (TextView) findViewById(R.id.txtViewCategory);
+		/*txtViewCategory = (TextView) findViewById(R.id.txtViewCategoryDetail);
 
 		switch (iquery) {
-		case CommonConfiguration.IGAS_STATION:
+		case CommonConfiguration.Ibabystore:
 			txtViewCategory.setText("CATEGORY "
-					+ CommonConfiguration.GAS_STATION_FIXED.toUpperCase());
+					+ CommonConfiguration.babystore.toUpperCase());
 			break;
-		case CommonConfiguration.ITAXI:
+		case CommonConfiguration.Ibookstore:
 			txtViewCategory.setText("CATEGORY "
-					+ CommonConfiguration.TAXI.toUpperCase());
+					+ CommonConfiguration.bookstore.toUpperCase());
 			break;
-		case CommonConfiguration.IATM:
+		case CommonConfiguration.Icothingstore:
 			txtViewCategory.setText("CATEGORY "
-					+ CommonConfiguration.ATM.toUpperCase());
+					+ CommonConfiguration.clothingstore.toUpperCase());
 			break;
-		case CommonConfiguration.IHOTEL:
+		case CommonConfiguration.Imallshopping:
 			txtViewCategory.setText("CATEGORY "
-					+ CommonConfiguration.HOTEL.toUpperCase());
+					+ CommonConfiguration.mallshopping.toUpperCase());
 			break;
-		case CommonConfiguration.IRESTAURANT:
-			txtViewCategory.setText("CATEGORY "
-					+ CommonConfiguration.RESTAURANT.toUpperCase());
-			break;
-		case CommonConfiguration.IBANK:
-			txtViewCategory.setText("CATEGORY "
-					+ CommonConfiguration.BANK.toUpperCase());
-			break;
-		case CommonConfiguration.IAIRPORT:
-			txtViewCategory.setText("CATEGORY "
-					+ CommonConfiguration.AIRPORT.toUpperCase());
-			break;
-		case CommonConfiguration.IPLACE:
-			txtViewCategory.setText("CATEGORY "
-					+ CommonConfiguration.PLACE.toUpperCase());
-			break;
-		}
-*/	}
+		}*/
+	}
 
 	/** Display ListView with parameters */
 	private void displayListView() {

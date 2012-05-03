@@ -169,10 +169,7 @@ public class FavouriteDetailInfoActivity extends TemplateActivity implements OnC
 		case CommonConfiguration.Ibabystore:
 			imgCategory.setImageResource(R.drawable.iconbaby);
 			break;
-		case CommonConfiguration.Ibank:
-			imgCategory.setImageResource(R.drawable.iconbank);
-			break;
-		case CommonConfiguration.Icothingstore:
+			case CommonConfiguration.Icothingstore:
 			imgCategory.setImageResource(R.drawable.iconclothing);
 			break;
 		case CommonConfiguration.Imallshopping:
