@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Wrapper -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_480x800"
+    android:orientation="vertical" >
+
+    <!-- Title -->
+
+    <ImageView
+        android:id="@+id/favourite_tt_categories"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tt_details_480x70" />
+
+    <!-- Result list -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/favourite_listResultContentWrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:src="@drawable/content_wrap_480x640" />
+
+        <ImageView
+            android:id="@+id/favourite_imgCategoryDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_empty_96x96" />
+
+        <TextView
+            android:id="@+id/favourite_txtViewCategoryDetail"
+            android:layout_width="225dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/favourite_imgCategoryDetail"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="#e2d821"
+            android:textSize="16sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <ListView
+            android:id="@+id/favourite_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/favourite_imgCategoryDetail"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="5dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="5dp" >
+        </ListView>
+
+        <!-- Button -->
+
+        <Button
+            android:id="@+id/favourite_btnFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="395dp"
+            android:background="@drawable/btn_removeselector_favourite" />
+
+        <Button
+            android:id="@+id/favourite_btnEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="395dp"
+            android:layout_toLeftOf="@id/favourite_btnFavourite"
+            android:background="@drawable/btn_selector_email" />
+
+        <Button
+            android:id="@+id/favourite_btnWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="395dp"
+            android:background="@drawable/btn_selector_web" />
+
+        <Button
+            android:id="@+id/favourite_btnShowMapDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="395dp"
+            android:layout_toRightOf="@id/favourite_btnWeb"
+            android:background="@drawable/btn_selector_showmap" />
+    </RelativeLayout>
+
+</LinearLayout>

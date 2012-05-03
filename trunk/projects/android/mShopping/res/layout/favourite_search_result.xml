@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Wrapper -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   android:background="@drawable/bg_480x800"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- Title -->
+
+        <ImageView
+            android:id="@+id/favourite_tt_categories"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+			android:src="@drawable/tt_searchresults_480x70"
+			/>
+
+        <TextView
+            android:id="@+id/favourite_txtViewCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:text="CATEGORY BANK"
+            android:textColor="#1be1e8"
+            android:textSize="13sp"
+            android:textStyle="bold" >
+        </TextView>
+    </RelativeLayout>
+
+    <!-- Result list -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/favourite_listResultContentWrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/content_wrap_480x640" />
+
+        <TextView
+            android:id="@+id/favourite_txtViewShortDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:text="Description"
+            android:textColor="#e2d821"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/favourite_txtViewDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Distance"
+            android:textColor="#e2d821"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <ListView
+            android:id="@+id/favourite_listResult"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/favourite_txtViewDistance"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="5dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="5dp"
+            android:paddingBottom="5dp" >
+        </ListView>
+
+        <Button
+            android:id="@+id/favourite_btnClearAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/btn_selector_showmap" />
+
+        <Button
+            android:id="@+id/favourite_btnDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="400dp"
+            android:layout_toRightOf="@id/favourite_btnClearAll"
+            android:background="@drawable/btn_selector_direction" />
+    </RelativeLayout>
+
+</LinearLayout>
