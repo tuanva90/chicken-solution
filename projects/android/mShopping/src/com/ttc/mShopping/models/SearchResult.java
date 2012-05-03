@@ -55,6 +55,10 @@ public class SearchResult implements Serializable, Comparable {
 		double c =  2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 		this.distance = CommonConfiguration.EARH_RADIUS * c;
 	}
+	public void setDistance(double distance)
+	{
+		this.distance = distance;
+	}
 
 	public void setUrl(String url) {
 		this.url = url;	

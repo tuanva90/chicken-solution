@@ -20,7 +20,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	 */
 	//private static String DATABASE_PATH = "/data/data/com.ttc.mShopping.activities/databases/";
 	private static String DATABASE_PATH = "file:///android_asset/";
-	private static final String DATABASE_NAME = "mFavouriteDB.db";
+	private static final String DATABASE_NAME = "mFavouriteDB";
 	private static final int DATABASE_VERSION = 2;
 	private static final String DATABASE_CREATE = "create table Favourite (_id integer primary key autoincrement, "
 			+ "name text , address text , phone text , lat text , lng text , rating text, distance text , url text , idc text );";
@@ -59,6 +59,12 @@ public class DBHelper extends SQLiteOpenHelper {
 		}
 	}
 	
+	@Override
+	public synchronized void close() {
+		// TODO Auto-generated method stub			
+		super.close();
+	}
+	
 	/**
      * Check if the database already exist to avoid re-copying the file each time you open the application.
      * @return true if it exists, false if it doesn't
@@ -70,7 +76,7 @@ public class DBHelper extends SQLiteOpenHelper {
     	try{
     		String myPath = DATABASE_PATH + DATABASE_NAME;
     		checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
- 
+    		
     	}catch(Exception e){
  
     		//database does't exist yet.

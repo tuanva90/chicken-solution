@@ -1,5 +1,6 @@
 package com.ttc.mShopping.services;
 
+import android.R.bool;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -67,8 +68,12 @@ public class DBAdapter {
 	 */
 	public void close() {
 		mDbHelper.close();
+		if(mDb.isOpen())
+			mDb.close();
+		if(mDb != null)
+			mDb = null;
 	}
-
+		
 	/**
 	 * Delete DB
 	 */
@@ -191,6 +196,28 @@ public class DBAdapter {
 		return mDb.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null);
 	}
 	
+	public boolean deleteItem(String lat,String lng, String address)
+	{
+		Cursor c = mDb.query(DATABASE_TABLE, new String[] { KEY_ROWID, KEY_NAME,
+				KEY_ADDRESS, KEY_PHONE, KEY_LAT, KEY_LNG, KEY_RATING, KEY_DISTANCE,
+				KEY_URL, KEY_IDC },
+				KEY_LAT +"="+ lat + " and " + KEY_LNG +"="+ lng +" and " + KEY_ADDRESS + " like " + "'%" + address + "%'", null, null, null,
+				null);
+		Log.i("checkIfExist"," DBAdapter - checkIfExist after Cursor");
+		if(c.moveToFirst() == false) {
+			Log.i("checkIfExist"," DBAdapter - checkIfExist false");
+			return false;
+		}
+		else{
+			long id = Long.parseLong(c.getString(c.getColumnIndexOrThrow(KEY_ROWID)));
+			long kq = deleteItem(id);
+			Log.i("checkIfExist"," DBAdapter - checkIfExist true"); 
+			if(kq != 0)
+				return true;
+			else
+				return false;
+		}
+	}
 	
 	public Cursor getItemsFromTo(int from, int count) {
 		Log.i("SelectLimit", "DBAdapter - getItemsFromTo = " + from + "and" + count);
