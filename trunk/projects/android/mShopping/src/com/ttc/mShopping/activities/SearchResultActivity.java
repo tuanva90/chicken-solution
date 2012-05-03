@@ -162,8 +162,10 @@ public class SearchResultActivity extends TemplateActivity implements LocationLi
 					.get(i).getTitleNoFormatting());
 			for (int j = 0; j < searchResultList.get(i).getAddressLines()
 					.size(); j++) {
-				address += searchResultList.get(i).getAddressLines().get(j)
+				String str = searchResultList.get(i).getAddressLines().get(j)
 						.toString();
+				str = (str.equals("{{Province"))?"Unknown":str;
+				address += str;
 				if (j != searchResultList.get(i).getAddressLines().size() - 1) {
 					address += ", ";
 				}
