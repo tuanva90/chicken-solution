@@ -95,7 +95,7 @@
             android:text="Show map"
             android:layout_width="116dp"
             android:layout_height="36dp"
-            android:layout_alignParentBottom="true"
+           android:layout_marginTop="400dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/shape_special_item_hight_light" />
 
