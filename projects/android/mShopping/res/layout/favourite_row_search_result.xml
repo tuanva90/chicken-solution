@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:layout_marginTop="65dp"
+    android:background="@android:color/transparent"
+    android:padding="3dp" >
+
+    <!-- Row address -->
+
+    <TextView
+        android:id="@+id/favourite_txtViewAddress"
+        android:layout_width="185dp"
+        android:layout_height="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:ellipsize="marquee"
+        android:maxLines="2"
+        android:text="Simple application that shows how to use RelativeLayout1111111111111111"
+        android:textColor="#03b2f3"
+        android:textSize="12sp" />
+
+    <!-- Row name -->
+
+    <TextView
+        android:id="@+id/favourite_txtViewName"
+        android:layout_width="200dp"
+        android:layout_height="28dp"
+        android:layout_above="@id/favourite_txtViewAddress"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="Ngan Hang Sacombank11111111111111111111111111111111111"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <!-- Arrow -->
+
+    <ImageView
+        android:id="@+id/favourite_icArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/next_18x18"
+        android:visibility="visible" />
+	
+<!--     <CheckBox android:id="@+id/favourite_checkbox" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="fill_parent" -->
+<!--         android:layout_alignParentBottom="true" -->
+<!--         android:layout_alignParentRight="true" -->
+<!--         android:layout_alignParentTop="true" -->
+<!--         android:layout_marginRight="16dp" -->
+<!--         android:checked="false"/> -->
+    <!-- Distance -->
+
+    <TextView
+        android:id="@+id/favourite_txtViewDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@id/favourite_icArrow"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="1000 km"
+        android:textColor="#d2a1ac"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
